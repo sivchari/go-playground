@@ -21,9 +21,10 @@ type Client struct {
 	version string
 }
 
-func NewClient() *Client {
+func NewClient(version string) *Client {
 	return &Client{
-		client: &http.Client{},
+		client:  &http.Client{},
+		version: version,
 	}
 }
 
